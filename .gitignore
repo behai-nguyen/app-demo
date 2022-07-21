@@ -161,7 +161,4 @@ cython_debug/
 
 # Local, personal
 Working/
-.dockerignore
 docker
-Dockerfile
-requirements.txt
