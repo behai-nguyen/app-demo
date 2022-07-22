@@ -1,27 +1,49 @@
-# app-demo
+# behai/app-demo:arm64flask
 
-Demonstrating Flask development server on Synology DSM DS218 demo.
+Build Docker image on Windows 10 Pro for linux/arm64, using Flask development server.
 
-## Related post(s)
+Python codes updated to use absolute import with requirements.txt.
 
-* [Synology DS218: preparing Python 3.9 Beta compelete devepment environment.](https://behainguyen.wordpress.com/2022/06/25/synology-ds218-preparing-python-3-9-beta-compelete-devepment-environment/)
+## Built image location
 
-  The code version for the above post has been tagged with **v1.0.0**. It can be cloned with:
-  
-  ```
-  git clone -b v1.0.0 https://github.com/behai-nguyen/app-demo.git
-  ```
-  
-* [Python: Docker image build -- install required packages via requirements.txt vs editable install.](https://behainguyen.wordpress.com/2022/07/22/python-docker-image-build-install-required-packages-via-requirements-txt-vs-editable-install/)
+```
+https://hub.docker.com/repository/docker/behai/app-demo
+```
 
-  The code versions can be cloned with:
+## To clone this branch
 
-  ```
-  git clone -b v1.0.1 https://github.com/behai-nguyen/app-demo.git
-  git clone -b v1.0.2 https://github.com/behai-nguyen/app-demo.git  
-  git clone -b v1.0.3 https://github.com/behai-nguyen/app-demo.git  
-  ```
-  
+```
+git clone -b arm64flask --single-branch https://github.com/behai-nguyen/app-demo.git
+```
+
+The codes are in **app-demo** directory of where we are.
+
+## To build and to run
+
+### To build
+
+```
+D:\app_demo>docker buildx build --platform linux/arm64 --tag behai/app-demo:arm64flask --push .
+```
+
+### To run the image
+
+```
+$ sudo docker run -d --network=host -v "/run/docker.sock:/var/run/docker.sock" --rm behai/app-demo:arm64flask
+```
+
+### To run the application
+
+```
+http://0.0.0.0:9880
+```
+
+Replace **0.0.0.0** with appropriate IP address. For example:
+
+```
+http://omphalos-nas-01:9880
+```
+
 ## On .env
 
 I understand it should not be checked in. But this is only a development project, I checked it in for the shake of completeness.

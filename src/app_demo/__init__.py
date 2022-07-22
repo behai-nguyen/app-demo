@@ -1,7 +1,7 @@
 """Flask app initialization via factory pattern."""
 from flask import Flask
 
-from app_demo.config import get_config
+from src.app_demo.config import get_config
 
 def create_app():
     app = Flask( 'dsm-python-demo' )
