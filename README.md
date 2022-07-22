@@ -11,6 +11,17 @@ Demonstrating Flask development server on Synology DSM DS218 demo.
   ```
   git clone -b v1.0.0 https://github.com/behai-nguyen/app-demo.git
   ```
+  
+* [Python: Docker image build -- install required packages via requirements.txt vs editable install.](https://behainguyen.wordpress.com/2022/07/22/python-docker-image-build-install-required-packages-via-requirements-txt-vs-editable-install/)
+
+  The code versions can be cloned with:
+
+  ```
+  git clone -b v1.0.1 https://github.com/behai-nguyen/app-demo.git
+  git clone -b v1.0.2 https://github.com/behai-nguyen/app-demo.git  
+  git clone -b v1.0.3 https://github.com/behai-nguyen/app-demo.git  
+  ```
+  
 ## On .env
 
 I understand it should not be checked in. But this is only a development project, I checked it in for the shake of completeness.
