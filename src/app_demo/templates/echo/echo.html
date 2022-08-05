@@ -1,0 +1,19 @@
+{% extends "base_template.html" %}
+
+{% block content %}
+
+<h1>Method: {{ request.method }}</h1>
+
+{% set echo = print_echo( request ) %}
+
+<h1>Blueprint: {{ echo.blueprint }}</h1>
+<h1>Endpoint: {{ echo.endpoint }}</h1>
+<h1>Date Time: {{ echo.datetime }}</h1>
+
+{% if request.method == 'POST' %}
+    {% for item in echo.data %}
+          <h3>Key: {{ item[0] }}. Value: {{ item[1] }}</h3>
+    {% endfor %}
+{% endif %}
+
+{% endblock %}
