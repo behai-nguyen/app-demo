@@ -21,6 +21,14 @@ Demonstrating Flask development server on Synology DSM DS218 demo.
   git clone -b v1.0.2 https://github.com/behai-nguyen/app-demo.git  
   git clone -b v1.0.3 https://github.com/behai-nguyen/app-demo.git  
   ```
+
+* [Python: pytest and Flask template context processor functions.](https://behainguyen.wordpress.com/2022/08/06/814/)  
+
+  The code version for the above post has been tagged with **v1.0.4**. It can be cloned with:
+
+  ```
+  git clone -b v1.0.4 https://github.com/behai-nguyen/app-demo.git  
+  ```
   
 ## On .env
 
