@@ -8,7 +8,7 @@ from os import (
 
 def template_root_path( source_dir='src' ):
     """This method assumes the project has the following layout:
-	
+
         f:\project_name\
         |
         |-- ...
@@ -28,11 +28,16 @@ def template_root_path( source_dir='src' ):
         |       |
         |       |-- static\
 
-    Return:		
+    Return:
 
 	    f:\project_name\{source_dir}\project_name\templates
-    """	
+		/volume1/web/project_name/src/project_name/templates
+    """
     base_dir = getcwd()
-	
+
     drive, root_path = path.splitdrive( base_dir )
-    return path.join( base_dir, source_dir, root_path[1:], 'templates' )
+
+    paths = root_path.split( '/' )
+    project_path = paths[len(paths)-1][1:] if len(drive) > 0 else paths[len(paths)-1]
+
+    return path.join( base_dir, source_dir, project_path, 'templates' )
