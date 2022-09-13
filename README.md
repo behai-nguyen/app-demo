@@ -29,6 +29,14 @@ Demonstrating Flask development server on Synology DSM DS218 demo.
   ```
   git clone -b v1.0.4 https://github.com/behai-nguyen/app-demo.git  
   ```
+
+* [Python: Flask, dictionaries as JSON objects ready to be used by JavaScript.](https://behainguyen.wordpress.com/2022/09/13/python-flask-dictionaries-as-json-objects-ready-to-be-used-by-javascript/)
+
+  The code version for the above post has been tagged with **v1.0.5**. It can be cloned with:
+
+  ```
+  git clone -b v1.0.5 https://github.com/behai-nguyen/app-demo.git  
+  ```
   
 ## On .env
 
