@@ -1,0 +1,29 @@
+{% extends "base_template.html" %}
+
+{% block content %}
+
+<h3>json_dumps_context_processor</h3>
+
+<script>
+var jsonObj1 = {{ json_dumps_context_processor(json_obj) }};
+</script>
+
+<h3>json_dumps_template_global</h3>
+
+<script>
+var jsonObj2 = {{ json_dumps_template_global(json_obj) }};
+</script>
+
+<h3>json_dumps_decorator_filter</h3>
+
+<script>
+var jsonObj3 = {{ json_obj|json_dumps_decorator_filter|safe }};
+</script>
+
+<h3>json_dumps_jinja_filter</h3>
+
+<script>
+var jsonObj4 = {{ json_obj|json_dumps_jinja_filter|safe }};
+</script>
+
+{% endblock %}

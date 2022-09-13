@@ -3,7 +3,9 @@ Routes mappers.
 """
 from app_demo.controllers import ( 
     echo_blueprint,
+    json_blueprint,
 	echo,
+    json_dumps,
 )
 
 """
@@ -18,6 +20,7 @@ url_map.strict_slashes = False
 """
 urls = [
     ( '/echo', [ 'GET', 'POST' ], echo_blueprint, echo.do_echo ),
+    ( '/json', [ 'GET' ], json_blueprint, json_dumps.do_json_dumps )
 ]
 
-blueprints = [ echo_blueprint ]
+blueprints = [ echo_blueprint, json_blueprint ]
