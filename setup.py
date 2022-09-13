@@ -14,5 +14,7 @@ setup(
     install_requires=[
         'Flask',
         'python-dotenv',
+        'pytest',
+        'coverage',
     ],
 )
