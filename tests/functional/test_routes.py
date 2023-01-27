@@ -61,3 +61,15 @@ def test_echo_post( test_client ):
     assert '<h3>Key: name1. Value: Nguyen</h3>' in html
     assert '<h3>Key: name2. Value: Van Be Hai</h3>' in html
     assert '<h3>Key: dob. Value: 6/7/1800</h3>' in html
+
+@pytest.mark.echo
+def test_echo_datetime( test_client ):
+    """
+    Test '/datetime' route with GET.
+    """
+    response = test_client.get( '/datetime' )
+
+    html = response.data.decode( 'utf-8' )
+
+    assert 'Date, Time Info: ' in html
+    assert ', The time offset: ' in html
