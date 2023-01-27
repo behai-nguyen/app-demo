@@ -20,8 +20,7 @@ url_map.strict_slashes = False
 """
 urls = [
     ( '/echo', [ 'GET', 'POST' ], echo_blueprint, echo.do_echo ),
-    ( '/json', [ 'GET' ], json_blueprint, json_dumps.do_json_dumps ),
-    ( '/datetime', [ 'GET', 'POST' ], echo_blueprint, echo.echo_datetime_info ),
+    ( '/json', [ 'GET' ], json_blueprint, json_dumps.do_json_dumps )
 ]
 
 blueprints = [ echo_blueprint, json_blueprint ]
